@@ -1,0 +1,32 @@
+{
+  "name": "dummy-agent",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc -p .",
+    "typecheck": "tsc -p . --noEmit",
+    "dev:langchain": "tsx --watch ./src/langchain/index.ts",
+    "dev:strands": "tsx --watch ./src/strands/index.ts",
+    "langchain": "tsx ./src/langchain/index.ts",
+    "strands": "tsx ./src/strands/index.ts",
+    "start:langchain": "pnpm run build && node ./dist/langchain/index.js",
+    "start:strands": "pnpm run build && node ./dist/strands/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.20.0",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "22.16.0",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  },
+  "dependencies": {
+    "@langchain/aws": "1.5.2",
+    "@langchain/core": "1.4.1",
+    "@langchain/langgraph-checkpoint": "1.2.2",
+    "@strands-agents/sdk": "1.25.0",
+    "langchain": "1.6.6"
+  }
+}
